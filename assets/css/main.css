@@ -167,7 +167,7 @@ input, select, textarea {
 	}
 
 	h6 {
-		font-size: 0.7em;
+		font-size: 1em;
 		line-height: 1.5em;
 	}
 
@@ -245,6 +245,15 @@ input, select, textarea {
 		font-size: 1.25em;
 		font-weight: bold;
 		margin: 0.5em 0;
+	}
+	.tab1 {
+		margin-left: 0.5em;
+	}
+	.tab2 {
+		margin-left: 1em;
+	}
+	.tab3 {
+		margin-left: 2em;
 	}
 /* Row */
 
@@ -2408,11 +2417,11 @@ input, select, textarea {
 		ul.feature-icons li {
 			text-decoration: none;
 			display: inline-block;
-			margin: 0 0 1.6875em 0;
+			margin: 0 0 0 0;
 			padding: 0.35em 0 0 3.5em;
 			position: relative;
 			vertical-align: top;
-			width: 48%;
+			width: 100%;
 		}
 
 			ul.feature-icons li:before {
@@ -2462,6 +2471,50 @@ input, select, textarea {
 			ul.icons li .icon:before {
 				font-size: 1.25em;
 			}
+
+/* Icons2 */
+
+ul.icons2 {
+	cursor: default;
+	list-style: none;
+	padding-left: 0em;
+}
+
+	ul.icons2 li {
+		display: inline-block;
+		padding: 0 5em 0 0em;
+	}
+
+		ul.icons2 li:last-child {
+			padding-right: 0 !important;
+		}
+
+		ul.icons2 li .icon:before {
+			font-size: 1.25em;
+			padding: 0 0.5em 0 0;
+		}
+
+/* Icons3 */
+
+ul.icons3{
+	cursor: default;
+	list-style: none;
+	padding-left: 0em;
+}
+
+	ul.icons3 li {
+		display: inline-block;
+	}
+
+		ul.icons3 li:last-child {
+			width: 100%;
+			padding-right: 0 !important;
+		}
+
+		ul.icons3 li .icon:before {
+			font-size: 1.25em;
+			padding: 0 0.5em 0 0;
+		}
 
 /* Table */
 
