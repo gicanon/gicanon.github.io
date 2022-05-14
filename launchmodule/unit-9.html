@@ -50,15 +50,16 @@
 								</div>
 								<div class="container">
 									<header class="major">
-										<h2>An Introduction to Algorithms and Basic Programming Concepts</h2>
-										<p>Unit 8</p>
+										<h2>Solving Problems Using Python</h2>
+										<p>Unit 9</p>
 									</header>
-									This Unit provides essential materials for algorithms. An <b>algorithm</b> is used to <b>solve</b> the user's problems by defining a <b>problem</b> so that the computer can understand it. 
-									The computer reads the problem as an instruction (input of the user) and follows it step by step until the problem is solved and an output is produced. 
-									Therefore, it needs to define relationships between the set of inputs, computational process and the input and requested output. Furthermore, it is vital how a problem is defined; a good algorithm needs to be <b>efficient</b> and <b>straightforward</b>.
-									Thus it is helpful to know different-solving steps. For describing a problem, an algorithm can contain if-then-else or loops like 'while' or 'for' commands and different mathematical operators such as addition (+) or subtraction (-).
-									Moreover, since there are many programming languages and people who want to understand the algorithm, a programmer has to know to describe an algorithm in a human-friendly language. For example, an algorithm can easily be translated into other languages with <b>pseudocode</b> or <b>flow-chart</b>.
+									The previous unit built an understanding of writing an algorithm in Python. 
+									Python will be used to write, execute, and test programs in this unit. As the previous unit mentioned, it is <b>essential</b> to focus on <b>efficient</b> <b>coding</b>. 
+									Besides writing the code to solve the problem, it needs to check how long it takes to run the program. 
+									A programmer needs to pay attention, especially by using iterations and recursions, since the code's run time depends on how long the computer iterates a task. 
+									Therefore, using the proper loop command is crucial for simultaneously achieving a correct and quick output.
 									<p></p>
+								
 									
 								</div>
 							</section>
@@ -76,12 +77,12 @@
 									<div class="row">
 										<div class="col-3 col-6 col-12-xsmall">
 											<ul class="actions stacked">
-												<li><a href="/launchmodule/unit-7.html" class="button alt fit">Previous</a></li>
+												<li><a href="/launchmodule/unit-8.html" class="button alt fit">Previous</a></li>
 											</ul>
 										</div>
 										<div class="col-3 col-6 col-12-xsmall">
 											<ul class="actions stacked">
-												<li><a href="/launchmodule/unit-9.html" class="button alt fit">Next</a></li>
+												<li><a href="" class="button alt fit">Next</a></li>
 											</ul>
 										</div>
 									</div>
@@ -98,9 +99,8 @@
 													<h4>This unit aims to:</h4>
 													<div class="row">
 														<ul>
-															<li>Apply the algorithm framework for describing and solving a problem</li>
-															<li>Demonstrate a step by step approach to solving a problem using pseudocode</li>
-															<li>Validate the output using different quality assurance matrices</li>
+															<li>Write an algorithm</li>
+															<li>Investigate the quality parameters of an algorithm</li>
 														</ul>
 													</div>
 										</article>
@@ -110,81 +110,126 @@
 												
 												<ul class="icons2">
 													<p><h4>The projects of the unit to achieve those learning outcomes:</h4></p>
-														<h6>Python Programming: Data Sort Using Cards</h6>
-														<li><a href="/PDF/Data Sort Using Cards.pdf" class="icon solid fa-file-pdf">Data Sort Using Cards</a></li>
+														<h6>Python Programming: 5 Mini Test</h6>
+														<li><a href="https://github.com/gicanon/five-mini-python-test" class="icon solid fa-link">Github: 5 Mini Test</a></li>
 														<h6></h6>
-														<li><a href="https://github.com/gicanon/sorting-cards" class="icon solid fa-link">Github: Sorting Cards Project</a></li>
-														<h6></h6>
-<pre><code>#insert a random card in a list of sorted card
-import random 
-														
-card_list = [10, 6, 5, 3, 2] #array of sorted card right to left
-second_card_list = [] #second array for searching cards > random card
-														
-#Step 1: pick a random card between 0 - 15
-rand_num = random.randint(0,15) 
-print(rand_num)
-														
-#Step 2: search numbers which is &gt; rand_num by creating a second_ array (second_card_list)
-index = 0
-for i in range (0, len(card_list)): 
-	if card_list[i] > rand_num:
-		second_card_list.append(card_list[i])
-		index += 1
-print(second_card_list)
-														
-#Step 3: last element of second_card_list is adjacent number of rand_num, searching index of adjacent number in card_list
-count = 0
-while count &lt; len(card_list):  
-	if not second_card_list:
-		sequence_number = 0
-		print(second_card_list)
-		break
-	elif card_list[count] == second_card_list[-1]:
-		sequence_number = count
-		break
-	else: 
-		count += 1
-print(sequence_number)
-														
-#Step 4: Insert rand_num in array (array_c)
-if not second_card_list: 
-	card_list.insert(sequence_number, rand_num)
-else:
-	card_list.insert(sequence_number +1, rand_num)
-														
-														
-#Step 5: print the sorted array with the random card
-print(card_list)
+<pre><code>TEST 1:
+
+def first_div_16():
+    """Accepting two positive integers, n1 and n2 as inputs 
+    Return the first number in range(n1,n2) that is divisible by 16
+    Return 0 if non of the number is divisible by 16"""
+
+    n1 = int(input("Enter an positive integer for n1: "))
+    n2 = int(input("Enter an positive integer for n2: "))
+    
+    while n1 and n2 &gt; 0:
+        for num in range(n1,n2):
+            if num % 16 == 0:
+                return num
+        return 0
+
+print(first_div_16())
 </code></pre>
-														<p></p>
-														<h6>Assignment Part 1: Data Structures and Algorithm Design</h6>
-														<li><a href="/PDF/Data Structures and Algorithm Design.pdf" class="icon solid fa-file-pdf">Data Structures and Algorithm Design - Contact Book</a></li>
-														
-										
+<h6></h6>
+<pre><code>TEST 2:
+
+def halve_to_2():
+    """Accepting one numeric as input
+    Return -1 if number &lt;= 0, if number &gt; 0 divide number by 2 over and over until number &lt; 2
+    Return number that is smaller than 2"""
+
+    n1 = int(input("Enter a number: "))
+    if n1 &lt;= 0:
+        return -1
+    else:
+        while n1 &gt;= 2:
+            n1 = n1 / 2
+        return n1
+
+print(halve_to_2())
+</code></pre>
+<h6></h6>
+<pre><code>TEST 3:
+
+def string_expansion():
+    """Accepting a non-empty string as input
+    Return string that contains every other character 2n+2 times, 
+    where n is original index of the letter"""
+
+    my_string = input("Enter a string: ")
+    while my_string != "":
+        length = len(my_string)
+        n = 0
+        new_string = ""
+        while n &lt; length:
+            new_string += (2*n+2)* my_string[n]
+            n += 2
+        return new_string
+
+print(string_expansion())
+</code></pre>
+<h6></h6>
+
+<pre><code>TEST 4:
+
+def item_count_from_index():
+    """Accpeting two inputs, a list and an integer-index
+    Return a count (number) of how many times the item at that index appears in the list
+    Return a empty string ("") if integer-index is out of bounds"""
+
+    input_elements = (input("Enter elements of a list separated by space: "))
+    user_list = input_elements.split()
+    try:
+        input_index = int(input("Enter a number as list index to count how many times the items at that index appears: "))
+        return user_list.count(user_list[input_index])
+    except (ValueError, IndexError):
+        return '""'
+
+print(item_count_from_index())
+</code></pre>
+<h6></h6>
+
+<pre><code>TEST 5:
+
+def length_times_largest():
+    """Accepting a list as input
+    Return length of list * largest integer (not float) in the list
+    Return empty list ("") if list does not contain an integer"""
+
+    input_elements = (input("Enter elements of a list separated by space: "))
+    user_list = input_elements.split()
+    integer_list = []
+    length = len(user_list)
+    i = 0
+    while i &lt; length:
+        try: 
+            integer_list.append(int(user_list[i]))
+            i += 1
+        except ValueError:
+            i += 1
+    if integer_list:
+        return length * max(integer_list)
+    else:
+        return '""'
+
+print(length_times_largest())
+</code></pre>
 												</ul>
 										</article>
 													<article>
 														<ul class="feature-icons">
 															<li class="icon solid fa-sync"><h4>Reflection</h4></li></ul>
 															<h4>What exactly have I learnt and how?</h4>
-															I completed the entire Python course, and I have learned how to write an algorithm and how to solve a problem. I am pretty proud of myself that I can program now. 
-															However, it is the beginning of my learning process, and I am motivated to learn more about how to code and solve problems. 
-															Furthermore, the assignment gives me a better understanding of using data structures and functions in python.
+															
+															To improve and challenge myself, I completed the five mini-tests in Python. It extended my approach to solving a problem, especially in creating a function in Python. 
+															In the meantime, I started to create a contact book for assignment part 2, and it was pretty challenging to understand how to use functions properly.
 										</article>
 										<article>
 											<ul class="feature-icons">
 												<li class="icon solid fa-file"><h4>Notes</h4></li></ul>
 												<p><h4>Notes from the elaboration of the unit, various meetings, and feedback from team members and tutors</h4></p>
-												Here are a few insights from the last <b>"Python"</b> courses:
-												<h6></h6>
-												<ul class="icons2">
-													<li><a href="/noteimg/Python-lists.png" class="icon solid fa-file-image">Lists</a></li><br>
-													<li><a href="/noteimg/Python-strings.png" class="icon solid fa-file-image"></a>Strings</li><br>
-													<li><a href="/noteimg/Python-functions.png" class="icon solid fa-file-image">User-defined function</a></li><br>
-													<li><a href="/noteimg/Python-recursion.png" class="icon solid fa-file-image">Recursion</a></li><br>
-												</ul>
-
+												No notes were elaborated in this unit.
 										</article>
 										
 									</div>
