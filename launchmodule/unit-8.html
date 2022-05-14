@@ -53,7 +53,11 @@
 										<h2>An Introduction to Algorithms and Basic Programming Concepts</h2>
 										<p>Unit 8</p>
 									</header>
-									 
+									This Unit provides essential materials for algorithms. An <b>algorithm</b> is used to <b>solve</b> the user's problems by defining a <b>problem</b> so that the computer can understand it. 
+									The computer reads the problem as an instruction (input of the user) and follows it step by step until the problem is solved and an output is produced. 
+									Therefore, it needs to define relationships between the set of inputs, computational process and the input and requested output. Furthermore, it is vital how a problem is defined; a good algorithm needs to be <b>efficient</b> and <b>straightforward</b>.
+									Thus it is helpful to know different-solving steps. For describing a problem, an algorithm can contain if-then-else or loops like 'while' or 'for' commands and different mathematical operators such as addition (+) or subtraction (-).
+									Moreover, since there are many programming languages and people who want to understand the algorithm, a programmer has to know to describe an algorithm in a human-friendly language. For example, an algorithm can easily be translated into other languages with <b>pseudocode</b> or <b>flow-chart</b>.
 									<p></p>
 									
 								</div>
@@ -94,8 +98,9 @@
 													<h4>This unit aims to:</h4>
 													<div class="row">
 														<ul>
-															<li>Appreciate the importance of the concepts of data structure, their functionality and techniques</li>
-															<li>Apply and demonstrate the applications of data structure in computer programming</li>
+															<li>Apply the algorithm framework for describing and solving a problem</li>
+															<li>Demonstrate a step by step approach to solving a problem using pseudocode</li>
+															<li>Validate the output using different quality assurance matrices</li>
 														</ul>
 													</div>
 										</article>
@@ -105,34 +110,79 @@
 												
 												<ul class="icons2">
 													<p><h4>The projects of the unit to achieve those learning outcomes:</h4></p>
-														<h6>Data Structure</h6>
-														<li><a href="/PDF/Data Structure - Linear and Non-Linear, Stack and Queue.pdf" class="icon solid fa-file-pdf">Data Structure - Linear and Non-Linear, Stack and Queue</a></li><p></p>
-														<h6>Seminar 4: Data Structure Questions</h6>
-														<li><a href="/PDF/Data Structure Seminar 4.pdf" class="icon solid fa-file-pdf">Data Structure Questions</a></li><p></p>
+														<h6>Python Programming: Data Sort Using Cards</h6>
+														<li><a href="/PDF/Data Sort Using Cards.pdf" class="icon solid fa-file-pdf">Data Sort Using Cards</a></li>
+														<h6></h6>
+														<li><a href="https://github.com/gicanon/sorting-cards" class="icon solid fa-link">Github: Sorting Cards Project</a></li>
+														<h6></h6>
+<pre><code>#insert a random card in a list of sorted card
+import random 
 														
-											
+card_list = [10, 6, 5, 3, 2] #array of sorted card right to left
+second_card_list = [] #second array for searching cards > random card
+														
+#Step 1: pick a random card between 0 - 15
+rand_num = random.randint(0,15) 
+print(rand_num)
+														
+#Step 2: search numbers which is &gt; rand_num by creating a second_ array (second_card_list)
+index = 0
+for i in range (0, len(card_list)): 
+	if card_list[i] > rand_num:
+		second_card_list.append(card_list[i])
+		index += 1
+print(second_card_list)
+														
+#Step 3: last element of second_card_list is adjacent number of rand_num, searching index of adjacent number in card_list
+count = 0
+while count &lt; len(card_list):  
+	if not second_card_list:
+		sequence_number = 0
+		print(second_card_list)
+		break
+	elif card_list[count] == second_card_list[-1]:
+		sequence_number = count
+		break
+	else: 
+		count += 1
+print(sequence_number)
+														
+#Step 4: Insert rand_num in array (array_c)
+if not second_card_list: 
+	card_list.insert(sequence_number, rand_num)
+else:
+	card_list.insert(sequence_number +1, rand_num)
+														
+														
+#Step 5: print the sorted array with the random card
+print(card_list)
+</code></pre>
+														<p></p>
+														<h6>Assignment Part 1: Data Structures and Algorithm Design</h6>
+														<li><a href="/PDF/Data Structures and Algorithm Design.pdf" class="icon solid fa-file-pdf">Data Structures and Algorithm Design - Contact Book</a></li>
+														
+										
 												</ul>
 										</article>
 													<article>
 														<ul class="feature-icons">
 															<li class="icon solid fa-sync"><h4>Reflection</h4></li></ul>
 															<h4>What exactly have I learnt and how?</h4>
-															Before I started to study the Postgraduate Certificate Computer Science course, I attended an online course on the topic "Computer Science 101: Master the Theory Behind Programming" by Kurt Anderson on Udemy. 
-															The online course provided me with fundamental knowledge of computer science and the logic behind the data structures. This knowledge helped me answer all the data structure questions in seminar 4. 
-															Therefore, I recommend attending this course to acquire basic knowledge before learning to program. In addition, together with the information from this unit, I understood that data structures are essential for developing any software. 
-															Consequently, I know where I will get accurate information regarding programming.
-	
-													</article>
+															I completed the entire Python course, and I have learned how to write an algorithm and how to solve a problem. I am pretty proud of myself that I can program now. 
+															However, it is the beginning of my learning process, and I am motivated to learn more about how to code and solve problems. 
+															Furthermore, the assignment gives me a better understanding of using data structures and functions in python.
 										</article>
 										<article>
 											<ul class="feature-icons">
 												<li class="icon solid fa-file"><h4>Notes</h4></li></ul>
 												<p><h4>Notes from the elaboration of the unit, various meetings, and feedback from team members and tutors</h4></p>
-												Here is the <b>certificate</b> for completing the online course by Kurt Anderson on Udemy.
+												Here are a few insights from the last <b>"Python"</b> courses:
 												<h6></h6>
 												<ul class="icons2">
-													<li><a href="/PDF/Certificate Computer Science 101 Udemy.pdf" class="icon solid fa-file-pdf">Certificate Computer Science 101: Master the Theory Behind Programming</a></li><br>
-												
+													<li><a href="/noteimg/Python-lists.png" class="icon solid fa-file-image">Lists</a></li><br>
+													<li><a href="/noteimg/Python-strings.png" class="icon solid fa-file-image"></a>Strings</li><br>
+													<li><a href="/noteimg/Python-functions.png" class="icon solid fa-file-image">User-defined function</a></li><br>
+													<li><a href="/noteimg/Python-recursion.png" class="icon solid fa-file-image">Recursion</a></li><br>
 												</ul>
 
 										</article>
