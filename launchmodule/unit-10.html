@@ -50,16 +50,17 @@
 								</div>
 								<div class="container">
 									<header class="major">
-										<h2>Solving Problems Using Python</h2>
-										<p>Unit 9</p>
+										<h2>Data Representation using Database Concepts</h2>
+										<p>Unit 10</p>
 									</header>
-									The previous unit built an understanding of writing an algorithm in Python. 
-									Python will be used to write, execute, and test programs in this unit. As the previous unit mentioned, it is <b>essential</b> to focus on <b>efficient</b> <b>coding</b>. 
-									Besides writing the code to solve the problem, it needs to check how long it takes to run the program. 
-									A programmer needs to pay attention, especially by using iterations and recursions, since the code's run time depends on how long the computer iterates a task. 
-									Therefore, using the proper loop command is crucial for simultaneously achieving a correct and quick output.
+									Welcome to Unit 10.
+									<h6></h6>
+									This unit demonstrates data representation using the <b>Structured Query Language (SQL)</b> database management tool. 
+									<b>Data management</b> is the <b>key</b> to <b>success</b>. Thus, a flawless data structure system is essential for analysing, predicting, and planning the organisation's next step. 
+									Many database models have an excellent architectural design and a framework to arrange data. 
+									It is distinguished between <b>relational</b> databases like MySQL and <b>non-relational</b> databases like MongoDB. 
+									It depends on the project which database is more suitable for managing the data. However, in this unit, students will learn about the tool SQL on MySQL, a relational database environment.
 									<p></p>
-								
 									
 								</div>
 							</section>
@@ -77,12 +78,12 @@
 									<div class="row">
 										<div class="col-3 col-6 col-12-xsmall">
 											<ul class="actions stacked">
-												<li><a href="/launchmodule/unit-8.html" class="button alt fit">Previous</a></li>
+												<li><a href="/launchmodule/unit-9.html" class="button alt fit">Previous</a></li>
 											</ul>
 										</div>
 										<div class="col-3 col-6 col-12-xsmall">
 											<ul class="actions stacked">
-												<li><a href="/launchmodule/unit-10.html" class="button alt fit">Next</a></li>
+												<li><a href="" class="button alt fit">Next</a></li>
 											</ul>
 										</div>
 									</div>
@@ -99,8 +100,9 @@
 													<h4>This unit aims to:</h4>
 													<div class="row">
 														<ul>
-															<li>Write an algorithm</li>
-															<li>Investigate the quality parameters of an algorithm</li>
+															<li>Apply the algorithm framework for describing and solving a problem</li>
+															<li>Demonstrate a step by step approach to solving a problem using pseudocode</li>
+															<li>Validate the output using different quality assurance matrices</li>
 														</ul>
 													</div>
 										</article>
@@ -110,24 +112,81 @@
 												
 												<ul class="icons2">
 													<p><h4>The projects of the unit to achieve those learning outcomes:</h4></p>
-														<h6>Python Programming: 5 Mini Test</h6>
-														<li><a href="https://github.com/gicanon/five-mini-python-test" class="icon solid fa-link">Github: 5 Mini Test</a></li>
+														<h6>Python Programming: Data Sort Using Cards</h6>
+														<li><a href="/PDF/Data Sort Using Cards.pdf" class="icon solid fa-file-pdf">Data Sort Using Cards</a></li>
 														<h6></h6>
+														<li><a href="https://github.com/gicanon/sorting-cards" class="icon solid fa-link">Github: Sorting Cards Project</a></li>
+														<h6></h6>
+<pre><code>#insert a random card in a list of sorted card
+import random 
+														
+card_list = [10, 6, 5, 3, 2] #array of sorted card right to left
+second_card_list = [] #second array for searching cards > random card
+														
+#Step 1: pick a random card between 0 - 15
+rand_num = random.randint(0,15) 
+print(rand_num)
+														
+#Step 2: search numbers which is &gt; rand_num by creating a second_ array (second_card_list)
+index = 0
+for i in range (0, len(card_list)): 
+	if card_list[i] > rand_num:
+		second_card_list.append(card_list[i])
+		index += 1
+print(second_card_list)
+														
+#Step 3: last element of second_card_list is adjacent number of rand_num, searching index of adjacent number in card_list
+count = 0
+while count &lt; len(card_list):  
+	if not second_card_list:
+		sequence_number = 0
+		print(second_card_list)
+		break
+	elif card_list[count] == second_card_list[-1]:
+		sequence_number = count
+		break
+	else: 
+		count += 1
+print(sequence_number)
+														
+#Step 4: Insert rand_num in array (array_c)
+if not second_card_list: 
+	card_list.insert(sequence_number, rand_num)
+else:
+	card_list.insert(sequence_number +1, rand_num)
+														
+														
+#Step 5: print the sorted array with the random card
+print(card_list)
+</code></pre>
+														<p></p>
+														<h6>Assignment Part 1: Data Structures and Algorithm Design</h6>
+														<li><a href="/PDF/Data Structures and Algorithm Design.pdf" class="icon solid fa-file-pdf">Data Structures and Algorithm Design - Contact Book</a></li>
+														
+										
 												</ul>
 										</article>
 													<article>
 														<ul class="feature-icons">
 															<li class="icon solid fa-sync"><h4>Reflection</h4></li></ul>
 															<h4>What exactly have I learnt and how?</h4>
-															
-															To improve and challenge myself, I completed the five mini-tests in Python. It extended my approach to solving a problem, especially in creating a function in Python. 
-															In the meantime, I started to create a contact book for assignment part 2, and it was pretty challenging to understand how to use functions properly.
+															I completed the entire Python course, and I have learned how to write an algorithm and how to solve a problem. I am pretty proud of myself that I can program now. 
+															However, it is the beginning of my learning process, and I am motivated to learn more about how to code and solve problems. 
+															Furthermore, the assignment gives me a better understanding of using data structures and functions in python.
 										</article>
 										<article>
 											<ul class="feature-icons">
 												<li class="icon solid fa-file"><h4>Notes</h4></li></ul>
 												<p><h4>Notes from the elaboration of the unit, various meetings, and feedback from team members and tutors</h4></p>
-												No notes were elaborated in this unit.
+												Here are a few insights from the last <b>"Python"</b> courses:
+												<h6></h6>
+												<ul class="icons2">
+													<li><a href="/noteimg/Python-lists.png" class="icon solid fa-file-image">Lists</a></li><br>
+													<li><a href="/noteimg/Python-strings.png" class="icon solid fa-file-image"></a>Strings</li><br>
+													<li><a href="/noteimg/Python-functions.png" class="icon solid fa-file-image">User-defined function</a></li><br>
+													<li><a href="/noteimg/Python-recursion.png" class="icon solid fa-file-image">Recursion</a></li><br>
+												</ul>
+
 										</article>
 										
 									</div>
