@@ -143,9 +143,9 @@
 									<h3>Contact Me</h3>
 									<form method="post" action="https://formspree.io/f/mwkyqpzp">
 										<div class="row gtr-uniform">
-											<div class="col-6 col-12-xsmall"><input type="text" name="name" id="name" placeholder="Name" /></div>
-											<div class="col-6 col-12-xsmall"><input type="email" name="email" id="email" placeholder="Email" /></div>
-											<div class="col-12"><input type="text" name="subject" id="subject" placeholder="Subject" /></div>
+											<div class="col-6 col-12-xsmall"><input type="text" required pattern="\S(.*\S)?" name="name" id="name" placeholder="Name" /></div>
+											<div class="col-6 col-12-xsmall"><input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" name="email" id="email" placeholder="Email" /></div>
+											<div class="col-12"><input type="text" required pattern="\S(.*\S)?" name="subject" id="subject" placeholder="Subject" /></div>
 											<div class="col-12"><textarea name="message" id="message" placeholder="Message" rows="6"></textarea></div>
 											<div class="col-12">
 												<ul class="actions">
