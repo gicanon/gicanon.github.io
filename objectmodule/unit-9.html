@@ -53,7 +53,10 @@
 										<h2>Packaging and Testing</h2>
 										<p>Unit 9</p>
 									</header>
-									In this unit 
+									Code testing should not be neglected. Unit 9 overviews how to <b>test code</b> and which modules can be used to test the code automatically. 
+									Furthermore, the unit indicates how <b>necessary</b> is the <b>documentation </b> of the code by explaining the <b>PEP257</b> convention to document a Python program. 
+									It also discusses <b>cyclomatic complexity</b> and how it is relevant for object-oriented systems.
+
 
 								</div>
 							</section>
@@ -71,12 +74,12 @@
 									<div class="row">
 										<div class="col-3 col-6 col-12-xsmall">
 											<ul class="actions stacked">
-												<li><a href="/objectmodule/unit-7.html" class="button alt fit">Previous</a></li>
+												<li><a href="/objectmodule/unit-8.html" class="button alt fit">Previous</a></li>
 											</ul>
 										</div>
 										<div class="col-3 col-6 col-12-xsmall">
 											<ul class="actions stacked">
-												<li><a href="" class="button alt fit">Next</a></li>
+												<li><a href="/objectmodule/unit-10.html" class="button alt fit">Next</a></li>
 											</ul>
 										</div>
 									</div>
@@ -95,7 +98,7 @@
 														<ul>
 															<li>Appropriately package a Python code development</li>
 															<li>Adequately and effectively document your code</li>
-															<li>Adequately and effectively document your code</li>
+															<li>Use the tools available in Python to test the quality of code</li>
 														</ul>
 													</div>
 										</article>
@@ -105,32 +108,22 @@
 												
 												<ul class="icons2">
 													<p><h4>The projects of the unit to achieve those learning outcomes:</h4></p>
-														<h6>Collaborative Discussion 2: Object-Oriented Design for IoT.</h6>
-														<li><a href="/PDF/OO Design for IoT.pdf" class="icon solid fa-file-pdf">OO Design for IoT</a></li>
-														<p></p>
-														<h6>Seminar: Erros and Data Sctructure</h6>
-														<li><a href="/PDF/Seminar Errors and Data Structures.pdf" class="icon solid fa-file-pdf">Errors & Data Structure</a></li>
-														<p></p>
-														<h6>Handling Exceptions</h6>
-														<li><a href="https://github.com/gicanon/handle_exceptions" class="icon solid fa-link">Python program to handle exceptions with the method try...except</a></li>
-														<p></p>
-														<h6>Linear Search Data Structure</h6>
-														<li><a href="https://github.com/gicanon/simple_linear_search" class="icon solid fa-link">Python program to carry out a linear search on a list data structure</a></li>
-														<p></p>
-														
-
+														<h6>e-Portfolio Activities - Testing</h6>
+														<li><a href="/PDF/E-Portfolio Activity for Unit 9.pdf" class="icon solid fa-file-pdf">e-Portfolio Activities for Unit 9</a></li>
+		
 												</ul>
 										</article>
 													<article>
 														<ul class="feature-icons">
 															<li class="icon solid fa-sync"><h4>Reflection</h4></li></ul>
 															<p><h4>What exactly have I learnt and how?</h4></p>
-															
-															This unit taught me about implementing data structures related to the driverless car in different scenarios. 
-															Unfortunately, the participation of my fellow students in the collaborative discussion was relatively low, and the learning outcome of the discussion was accordingly lacking. 
-															Nevertheless, it was enough for me to learn about different meta-models and why they are good and bad simultaneously. 
-															Furthermore, the Python course "Polymorphism" gave me more practice exercises about another great ability of the object-oriented-programming. 
-															Polymorphism is the ability of a programming language to present the same interface for several different underlying data types. As a result, with the ability, code can be reduced.
+													
+															In this unit, I learned how to test the code and which packages can be used to test the code automatically. 
+															The cyclomatic complexity and the portfolio tasks on this topic made me think about how I should structure my code next time. 
+															The higher the number of cyclomatic complexity, the more complex the code and the more difficult it is to test.
+															As I said in unit 8, my fellow students' participation in the collaborative discussion was relatively low, 
+															so I could only respond to one of my fellow students, which is attached in the notes section
+														
 															
 													</article>
 										</article>
@@ -138,9 +131,52 @@
 											<ul class="feature-icons">
 												<li class="icon solid fa-file"><h4>Notes</h4></li></ul>
 												<p><h4>Notes from the elaboration of the unit, various meetings, and feedback from team members and tutors</h4></p>
-												No notes were elaborated i
 
+												<p><h6>Feedback from a student on the collaborative discussion "OO Design for IoT"</h6>
+
+												I completely agree with your views on the use of metamodels. 
+												I think this brings back to our first collaborative discussion about software reusability: using metamodels is a great way to reuse the existing models.
+												<h6></h6>
+												Indeed, it takes strict discipline to fully capitalize on the metamodels. 
+												Because it increases the time required in the design phase, project owners might be reluctant to use them or spend adequate time to use them properly, 
+												especially when there is a pressing need to market the product in the shortest time possible. However, the advantages of using them are obvious.</p>
+
+												<h6>Reply to a student on the collaborative discussion topic: "OO Design for IoT"</h6>
 												
+												Since object-oriented programming aims to simulate the real-world objects in programming practices, 
+												it is a perfect match for the Internet of Things (IoT) in which real-world objects communicate with each other via a network and users interact with them. 
+												For this reason, modeling and particularly metamodels play an important role in the design and implementation of the systems.
+												<h6></h6>
+												From my point of view, the most important strength of the metamodel approach (Fortino et al., 2015) is that it helps to identify the way smart object interacts with devices/services. 
+												It also urges developers to focus on the design aspects and agree upon them before the implementation and development process begins. 
+												Finally, such metamodels provide a blueprint for the systems that would be developed in the future, enhancing reusability of the models.
+												<h6></h6>	
+												When it comes to the weaknesses, I think metamodel approach also suffers from the same weaknesses of Unified Modeling Language (UML) (Lange, et al., 2006).
+												<h6></h6>
+												For instance, lack of “formal semantics” is an important difficulty. 
+												Moreover, following the metamodel approach is time-consuming and thus, it may be challenging to follow this model especially in time-sensitive projects. 
+												Because of this, it might also prove difficult to persuade project owners and the developers to devote time to the design process. 
+												<h6></h6>	
+												I came up with this smart model for a driverless car:
+												<h6></h6>
+												<img class="image" src="/noteimg/Peers-image-discussion-ooforIoT.png" alt="OO Design Model for IoT - Driverles Car"/>
+												<h6></h6>
+												As expected from the metamodel approach it is a high-level model which excludes implementation details.
+												<h6></h6>
+												<b>References:</b>
+												<h6></h6>
+												Fortino, G., Guerrieri, A., Russo, W. & Savaglio, C. (2015) Towards a Development Methodology for Smart Object-Oriented IoT Systems: A Metamodel Approach. 
+												2015 IEEE International Conference on Systems, Man, and Cybernetics. 1297-1302. 
+												<h6></h6>
+												Lange, C. F. J., Chaudron, M. R. V. & Muskens, J. (2006) In practice: UML software architecture and design description. IEEE Software 23(2): 40-46.
+												<h6></h6>
+													- <i><b>Post</b> by <b>Gianluca Cannone:</b></i>
+													<h6></h6>
+													<div class="tab2">
+													Hi,<br>
+													I also agree with you that the great strength of the metamodel approach is the focus on device interactions. 
+													But, as you said, it is very time-consuming and a big challenge when time is of the essence in development.
+
 										</article>
 										
 									</div>
