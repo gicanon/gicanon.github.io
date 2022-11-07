@@ -142,6 +142,70 @@
 											<ul class="feature-icons">
 												<li class="icon solid fa-file"><h4>Notes</h4></li></ul>
 												<p><h4>Notes from the elaboration of the unit, various meetings, and feedback from team members and tutors</h4></p>
+												<h6>Reply to a student on the collaborative discussion topic: "Identification and Authentication Failures"</h6>
+												According to the OWASP Top 10:2021, Identification and Authentication Failures rank seventh among the most common weaknesses (OWASP, 2021). 
+												Indeed, even though measures like 2FA and robust password policies are applied widely, 
+												it still comes down to the final user to keep his/her credentials and data safe. 
+												From my point of view, this human factor remains as one of the weak spots in today’s world, as evidenced by the staggering amount of stolen data/assets online every year (III, N.D.).
+												<h6></h6>
+												Hence, the mitigation to identification and authentication failures needs a two-pillar approach: 
+												The technical pillar encompasses robust password policies and additional security checks (e.g. 2FA) that would enforce user compliance. 
+												On the other hand, in the user pillar, the users must be aware of the security risks associated with the weak passwords or the potentials vulnerabilities associated with storing credentials or other sensitive information. 
+												<h6></h6>
+												In the flowchart (activity diagram) below, a brute force attack is depicted. 
+												As we can see, no additional methods like 2FA is in place and the attacker is allowed to try entering the correct credentials for infinite times (i.e. no restriction on number of attempts). 
+												The system prompts for credentials and rejects the incorrect ones, but the attacker keeps trying until he/she comes up with the correct one, 
+												potentially starting from the common weak passwords (e.g. ‘Password’, ‘12345’, etc.) and making his way towards passwords containing potential personal data (e.g. name, surname, birthdate, etc.). 
+												As mentioned above, if the user sets a complex password that is hard to guess and/or there is a 2FA authentication method in place, attacker’s job might get significantly harder.
+												<h6></h6>
+												<img class="image" src="/noteimg/Flowchart-Etkin-1.png"/>
+												<h6></h6>
+												On the other hand, the attacker may try to follow the “Forgot password” route, as depicted in the activity diagram below:
+												<img class="image" src="/noteimg/Flowchart-Etkin-2.png"/>
+												<h6></h6>
+												In this case, having weak recovery questions that are easy to guess (such as “Your birthday” or “Favorite team”) 
+												and not the absence of secondary recovery methods (e.g. mobile phone) makes it easy to reset the password of the victim by the attacker.
+												<h6></h6>
+												<b>References:</b>
+												<h6></h6>
+												OWASP (2021) OWASP Top 10 - 2021. Available from: https://owasp.org/Top10/ [Accessed 25 September 2022].
+												<h6></h6>
+												III, (N.D.) Facts + Statistics: Identity theft and cybercrime. Available from: https://www.iii.org/fact-statistic/facts-statistics-identity-theft-and-cybercrime [Accessed 25 September 2022].
+												<h6></h6>
+												- <i><b>Post</b> by <b>Gianluca Cannone:</b></i>
+                                                <h6></h6>
+                                                <div class="tab2">
+													Even though it is very effective, everyone knows how annoying 2FA is :D Anyway, 
+													I agree with you that the end user needs to keep their credentials secure. 
+													Your UML clearly shows how important it is to have a 2FA.
+													<h6></h6>
+                                                    - <i><b>Reply</b> to Gianluca Cannnone from the <b>student:</b></i>
+                                                </div>
+                                                    <h6></h6>
+                                                <div class="tab3">
+													Honestly, I agree with you. When 2FA was first introduced, I was really happy with it. 
+													I don't have a single account that does not have 2FA on it. The issue is that after five years or so of using it and having over 20 accounts with 2FA, 
+													setting up a new computer or just wanting to access an account quickly is exhausting.
+													Also, having to go through and find the correct 2FA account and type the 6-digit number is exhausting. 
+													Sadly it is necessary.
+													<h6></h6>
+													I really like Google and Microsoft's implementation of 2FA. There isn't a need to enter a code, 
+													but rather a notification pops up on your phone asking you whether it was you who just signed in or not. 
+													Answering that is much better than typing a 6-digit number, but even that gets annoying after a while. 
+													<h6></h6>
+													But sadly, it is necessary to keep your accounts secure.
+													<h6></h6>
+													One thing I do and many security experts advise regarding security questions like 
+													"what is your birthdate" or "what high school you went to." These questions should not be answered as is. 
+													What I mean by that is when you create a security question, and let us say you pick "What is your birthdate?" do not answer with your birthdate but rather answer with a different answer like "UK-EU-World". It would be much harder for an attacker to guess that rather than having your answer your actual birthdate.
+													<h6></h6>
+													Adding small security tips like that when customers create their security question is also a good idea.
+
+
+
+												
+
+										
 
 										</article>
 										
